@@ -11,10 +11,14 @@ type Player struct {
 	camera *rl.Camera2D
 }
 
+func centerPlayerToCamera(player *Player, winSize rl.Vector2) {
+	player.camera.Offset.X = (winSize.X-player.Size.X)/2 - player.Pos.X
+	player.camera.Offset.Y = (winSize.Y-player.Size.Y)/2 - player.Pos.Y
+}
+
 func (player *Player) Start(camera *rl.Camera2D, winSize rl.Vector2) {
 	player.camera = camera
-	player.Pos.X = (winSize.X - player.Size.X) / 2
-	player.Pos.Y = (winSize.Y - player.Size.Y) / 2
+	centerPlayerToCamera(player, winSize)
 }
 
 func (player *Player) Tick(dt float32) {
@@ -34,6 +38,7 @@ func (player *Player) Tick(dt float32) {
 		player.Pos.X += player.Speed
 		player.camera.Offset.X -= player.Speed
 	}
+	player.camera.Target = player.Pos //Set camera to track player
 }
 
 func (player *Player) Render() {
