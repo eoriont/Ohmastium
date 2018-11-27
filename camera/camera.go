@@ -4,8 +4,17 @@ import (
 	"github.com/gen2brain/raylib-go/raylib"
 )
 
-var Camera rl.Camera2D
+//Public Camera
+var (
+	MainCamera *rl.Camera2D
+)
 
-func CreateCamera() {
-	Camera = rl.Camera2D{Offset: rl.Vector2{0, 0}, Target: rl.Vector2{500, 500}, Rotation: 0, Zoom: 1}
+//InitCamera (sets non-nil values)
+func InitCamera() {
+	MainCamera = &rl.Camera2D{
+		Offset:   rl.Vector2{X: 0, Y: 0},
+		Target:   rl.Vector2{X: 0, Y: 0},
+		Rotation: 0,
+		Zoom:     1,
+	}
 }

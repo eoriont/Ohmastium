@@ -1,46 +1,61 @@
 package player
 
 import (
+	c "../camera"
+	u "../utilities"
 	"github.com/gen2brain/raylib-go/raylib"
 )
 
+//Player struct
 type Player struct {
-	Pos    rl.Vector2
-	Size   rl.Vector2
-	Speed  float32
-	camera *rl.Camera2D
+	Pos   rl.Vector2
+	Size  rl.Vector2
+	Speed float32
 }
 
-func centerPlayerToCamera(player *Player, winSize rl.Vector2) {
-	player.camera.Offset.X = (winSize.X-player.Size.X)/2 - player.Pos.X
-	player.camera.Offset.Y = (winSize.Y-player.Size.Y)/2 - player.Pos.Y
+//Centers camera to target
+func centerCameraToPlayer(player *Player) {
+	c.MainCamera.Offset.X = (u.WinSize.X-player.Size.X)/2 - player.Pos.X
+	c.MainCamera.Offset.Y = (u.WinSize.Y-player.Size.Y)/2 - player.Pos.Y
 }
 
-func (player *Player) Start(camera *rl.Camera2D, winSize rl.Vector2) {
-	player.camera = camera
-	centerPlayerToCamera(player, winSize)
+//Start player, set camera to target
+func (player *Player) Start() {
+	centerCameraToPlayer(player)
 }
 
+//Tick for player, check movements and updated player position and camera
 func (player *Player) Tick(dt float32) {
 	if rl.IsKeyDown(rl.KeyW) {
 		player.Pos.Y -= player.Speed
-		player.camera.Offset.Y += player.Speed
+		c.MainCamera.Offset.Y += player.Speed
 	}
 	if rl.IsKeyDown(rl.KeyS) {
 		player.Pos.Y += player.Speed
-		player.camera.Offset.Y -= player.Speed
+		c.MainCamera.Offset.Y -= player.Speed
 	}
 	if rl.IsKeyDown(rl.KeyA) {
 		player.Pos.X -= player.Speed
-		player.camera.Offset.X += player.Speed
+		c.MainCamera.Offset.X += player.Speed
 	}
 	if rl.IsKeyDown(rl.KeyD) {
 		player.Pos.X += player.Speed
-		player.camera.Offset.X -= player.Speed
+		c.MainCamera.Offset.X -= player.Speed
 	}
-	player.camera.Target = player.Pos //Set camera to track player
+	centerCameraToPlayer(player)
+	c.MainCamera.Target = player.Pos
 }
 
+//Render the player
 func (player *Player) Render() {
 	rl.DrawRectangleV(player.Pos, player.Size, rl.Red)
+}
+
+//GetPlayer gets the player from file (hardcoded for now)
+func GetPlayer() Player {
+	return Player{
+		Pos:   rl.Vector2{X: 110, Y: 110},
+		Size:  rl.Vector2{X: 90, Y: 90},
+		Speed: 5,
+	}
 }

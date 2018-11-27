@@ -4,8 +4,8 @@ import (
 	"github.com/gen2brain/raylib-go/raylib"
 )
 
+//Block struct
 type Block struct {
-	Pos  rl.Vector2
 	Size rl.Vector2
-	// type
+	// TODO: Type
 }
