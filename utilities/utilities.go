@@ -1,6 +1,8 @@
 package utilities
 
 import (
+	"time"
+
 	"github.com/gen2brain/raylib-go/raylib"
 )
 
@@ -17,4 +19,9 @@ func Vec2Mult(v1, v2 rl.Vector2) rl.Vector2 {
 	x := v1.X * v2.X
 	y := v1.Y * v2.Y
 	return rl.Vector2{X: x, Y: y}
+}
+
+//MakeTimestamp of the current millisecond
+func MakeTimestamp() int64 {
+	return time.Now().UnixNano() / int64(time.Millisecond)
 }

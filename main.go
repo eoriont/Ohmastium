@@ -9,14 +9,23 @@ import (
 )
 
 func main() {
-	u.SetWindowSize(800, 450) //See utilities
+	u.SetWindowSize(1920, 1080) //See utilities
 	rl.InitWindow(int32(u.WinSize.X), int32(u.WinSize.Y), "Ohmastium")
-	rl.SetTargetFPS(120)
+
+	fps := 60
+	rl.SetTargetFPS(int32(fps))
+	lastTick := u.MakeTimestamp()
 
 	start()
 	for !rl.WindowShouldClose() {
-		tick(1)
-		render()
+		nowTime := u.MakeTimestamp()
+
+		dt := nowTime - lastTick
+		if dt >= int64(1000/fps) {
+			tick(float32(dt))
+			render()
+			lastTick = nowTime
+		}
 	}
 }
 
@@ -38,6 +47,7 @@ func tick(dt float32) {
 	p.Tick(dt)
 	w.Tick(dt)
 }
+
 func render() {
 	rl.BeginDrawing()
 	rl.BeginMode2D(*c.MainCamera)
