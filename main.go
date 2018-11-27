@@ -11,7 +11,7 @@ import (
 func main() {
 	u.SetWindowSize(800, 450) //See utilities
 	rl.InitWindow(int32(u.WinSize.X), int32(u.WinSize.Y), "Ohmastium")
-	rl.SetTargetFPS(120)
+	rl.SetTargetFPS(240)
 
 	start()
 	for !rl.WindowShouldClose() {
