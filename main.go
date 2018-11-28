@@ -2,6 +2,7 @@ package main
 
 import (
 	c "./camera"
+	"./devcookie"
 	"./player"
 	u "./utilities"
 	"./world"
@@ -9,23 +10,24 @@ import (
 )
 
 func main() {
-	u.SetWindowSize(1000, 1000) //See utilities
+	u.SetWindowSize(1000, 1000)
 	rl.InitWindow(int32(u.WinSize.X), int32(u.WinSize.Y), "Ohmastium")
 
 	fps := 60
+	ticks := 100
 	rl.SetTargetFPS(int32(fps))
 	lastTick := u.MakeTimestamp()
 
-	start()
+	start() //Load assets, Game data, and initialize variables
 	for !rl.WindowShouldClose() {
 		nowTime := u.MakeTimestamp()
 
 		dt := nowTime - lastTick
-		if dt >= int64(1000/fps) {
+		if dt >= int64(1000/ticks) {
 			tick(float32(dt))
-			render()
 			lastTick = nowTime
 		}
+		render()
 	}
 }
 
@@ -37,8 +39,7 @@ var (
 func start() {
 	//Setting Variables
 	p = player.GetPlayer()
-	w = world.GetWorld()
-	c.InitCamera()
+	c.InitCameras()
 	w.Start()
 	p.Start()
 }
@@ -50,10 +51,18 @@ func tick(dt float32) {
 
 func render() {
 	rl.BeginDrawing()
-	rl.BeginMode2D(*c.MainCamera)
-	defer rl.EndMode2D()
 	defer rl.EndDrawing()
+
+	//Main Camera
+	rl.BeginMode2D(*c.MainCamera)
 	rl.ClearBackground(rl.RayWhite)
 	w.Render()
 	p.Render()
+	devcookie.DisplayOrigin()
+	rl.EndMode2D()
+
+	//GUI
+	rl.BeginMode2D(*c.GUICamera)
+	devcookie.DisplayFPS()
+	rl.EndMode2D()
 }

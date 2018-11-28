@@ -1,53 +1,67 @@
 package world
 
 import (
-	u "../utilities"
 	. "./blocks"
 	s "./structures"
 	"github.com/gen2brain/raylib-go/raylib"
+	rm "github.com/gen2brain/raylib-go/raymath"
 )
 
 //World Struct
 type World struct {
-	Pos  rl.Vector2
-	Size rl.Vector2
-
-	Blocks map[rl.Vector2]Block
+	Pos        rl.Vector2
+	Size       rl.Vector2
+	Structures []s.Structure
+	Blocks     map[rl.Vector2]Block
 }
-
-var TestFusor s.Fusor
 
 //Start the world
 func (world *World) Start() {
-	TestFusor.Start()
-	world.Blocks = make(map[rl.Vector2]Block)
-
-	for i := float32(0); i < world.Size.X; i++ {
-		for j := float32(0); j < world.Size.Y; j++ {
-			pos := rl.Vector2{float32(i), float32(j)}
-			world.Blocks[pos] = Block{Size: rl.Vector2{float32(20), float32(20)}}
-		}
-	}
+	world.LoadWorld()
+	world.LoadStructures()
 }
 
 //Tick the world
 func (world *World) Tick(dt float32) {
-	TestFusor.Tick()
+
 }
 
 //Render the world
 func (world *World) Render() {
+	//BLOCKS
 	for pos, block := range world.Blocks {
-		rl.DrawRectangleV(u.Vec2Mult(pos, block.Size), block.Size, rl.Black)
+		loc := rm.Vector2Add(world.Pos, pos)
+		rl.DrawRectangleV(loc, rm.Vector2Add(loc, block.Size), rl.Color{R: 0, G: 200, B: 0, A: 255})
 	}
-	TestFusor.Render()
+	//STRUCTURES
+	for _, s := range world.Structures {
+		s.Render()
+	}
 }
 
-//GetWorld gets the world from file (hardcoded for now)
-func GetWorld() World {
-	return World{
-		Pos:    rl.Vector2{X: 0, Y: 0},
-		Size:   rl.Vector2{X: 10, Y: 105},
-		Blocks: nil,
+//LoadWorld , (Generated for now, file system soon)
+func (world *World) LoadWorld() {
+	world.Pos = rl.Vector2{X: 20, Y: 20}
+	world.Size = rl.Vector2{X: 100, Y: 100}
+	world.Blocks = make(map[rl.Vector2]Block)
+
+	for i := float32(0); i < world.Size.X; i++ {
+		for j := float32(0); j < world.Size.Y; j++ {
+			pos := rl.Vector2{X: float32(i), Y: float32(j)}
+			world.Blocks[pos] = Block{Size: rl.Vector2{X: float32(20), Y: float32(20)}}
+		}
+	}
+}
+
+//LoadStructures , (Generated for now, file system soon)
+func (world *World) LoadStructures() {
+	for i := 0; i < 3; i++ {
+		fusor := s.Fusor{}
+		fusor = s.NewFusor(rl.Vector2{X: float32(i * 30), Y: 0})
+		world.Structures = append(world.Structures, fusor)
+
+		bench := s.WorkBench{}
+		bench = s.NewBench(rl.Vector2{X: float32(i * 30), Y: 30})
+		world.Structures = append(world.Structures, bench)
 	}
 }

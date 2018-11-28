@@ -10,7 +10,7 @@ import (
 type Player struct {
 	Pos   rl.Vector2
 	Size  rl.Vector2
-	Speed int
+	Speed float32
 }
 
 //Centers camera to target
@@ -27,16 +27,16 @@ func (player *Player) Start() {
 //Tick for player, check movements and updated player position and camera
 func (player *Player) Tick(dt float32) {
 	if rl.IsKeyDown(rl.KeyW) {
-		player.Pos.Y -= float32(player.Speed) * dt
+		player.Pos.Y -= player.Speed * dt
 	}
 	if rl.IsKeyDown(rl.KeyS) {
-		player.Pos.Y += float32(player.Speed) * dt
+		player.Pos.Y += player.Speed * dt
 	}
 	if rl.IsKeyDown(rl.KeyA) {
-		player.Pos.X -= float32(player.Speed) * dt
+		player.Pos.X -= player.Speed * dt
 	}
 	if rl.IsKeyDown(rl.KeyD) {
-		player.Pos.X += float32(player.Speed) * dt
+		player.Pos.X += player.Speed * dt
 	}
 	centerCameraToPlayer(player)
 	c.MainCamera.Target = player.Pos
@@ -51,7 +51,7 @@ func (player *Player) Render() {
 func GetPlayer() Player {
 	return Player{
 		Pos:   rl.Vector2{X: 110, Y: 110},
-		Size:  rl.Vector2{X: 90, Y: 90},
-		Speed: 2,
+		Size:  rl.Vector2{X: 35, Y: 35},
+		Speed: 0.5,
 	}
 }
