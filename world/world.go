@@ -48,7 +48,7 @@ func (world *World) LoadWorld() {
 	for i := float32(0); i < world.Size.X; i++ {
 		for j := float32(0); j < world.Size.Y; j++ {
 			pos := rl.Vector2{X: float32(i), Y: float32(j)}
-			world.Blocks[pos] = DIRT_BLOCK
+			world.Blocks[pos] = Block{"FakeDirt", rl.Color{139, 69, 19, 100}}
 		}
 	}
 }
