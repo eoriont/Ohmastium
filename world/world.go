@@ -29,9 +29,9 @@ func (world *World) Tick(dt float32) {
 //Render the world
 func (world *World) Render() {
 	//BLOCKS
-	for pos, block := range world.Blocks {
+	for pos, _ := range world.Blocks {
 		loc := rm.Vector2Add(world.Pos, pos)
-		rl.DrawRectangleV(loc, rm.Vector2Add(loc, block.Size), rl.Color{R: 0, G: 200, B: 0, A: 255})
+		rl.DrawRectangleV(loc, rm.Vector2Add(loc, rl.Vector2{20, 20}), world.Blocks[pos].Texture)
 	}
 	//STRUCTURES
 	for _, s := range world.Structures {
@@ -48,7 +48,7 @@ func (world *World) LoadWorld() {
 	for i := float32(0); i < world.Size.X; i++ {
 		for j := float32(0); j < world.Size.Y; j++ {
 			pos := rl.Vector2{X: float32(i), Y: float32(j)}
-			world.Blocks[pos] = Block{Size: rl.Vector2{X: float32(20), Y: float32(20)}}
+			world.Blocks[pos] = DIRT_BLOCK
 		}
 	}
 }

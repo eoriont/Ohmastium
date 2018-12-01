@@ -6,6 +6,8 @@ import (
 
 //Block struct
 type Block struct {
-	Size rl.Vector2
+	Name    string
+	Texture rl.Color
+	// Size rl.Vector2 NOTE: Block size is constant
 	// TODO: Type
 }
