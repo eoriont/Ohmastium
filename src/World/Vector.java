@@ -9,4 +9,8 @@ public class Vector {
         this.y = y;
     }
 
+    public Vector add(Vector y, Vector z) {
+        return new Vector(y.x + z.x, y.y + z.y);
+    }
+
 }
