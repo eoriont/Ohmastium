@@ -12,7 +12,6 @@ public class WorldState extends GameState {
     public World world;
     public Player player;
     public static Camera cam;
-    public DrawInterface relativeDraw;
 
     public WorldState(GameStateManager gsm) {
         super(gsm);
@@ -20,7 +19,7 @@ public class WorldState extends GameState {
 
     @Override
     public void init() {
-        cam = new Camera(new Vector(0, 0), gsm.graphics2D);
+        cam = new Camera(new Vector(0, 0));
         cam.init();
 
         world = new World(20, 20);
@@ -28,8 +27,6 @@ public class WorldState extends GameState {
 
         player = new Player(gsm, world, cam);
         player.init();
-
-        relativeDraw = new DrawInterface(this.cam);
     }
 
     @Override
@@ -42,7 +39,7 @@ public class WorldState extends GameState {
 
     @Override
     public void render(Graphics2D g) {
-        world.render(this.relativeDraw);
+        world.render(g);
         player.render(g);
     }
 

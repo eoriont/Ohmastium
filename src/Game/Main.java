@@ -13,7 +13,7 @@ public class Main {
     public static void main(String[] args) {
         Constants.init();
         frame = new GameWindow("Ohmastium", (int) Constants.getScreenSize().x, (int) Constants.getScreenSize().y);
-        GameLoop gameLoop = new GameLoop((int) Constants.getScreenSize().x, (int) Constants.getScreenSize().y, frame);
+        GameLoop gameLoop = new GameLoop((int) Constants.getScreenSize().x, (int) Constants.getScreenSize().y);
         frame.setFullscreen(1);
 
         KeyboardManager km = new KeyboardManager();

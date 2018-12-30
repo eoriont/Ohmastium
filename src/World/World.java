@@ -1,6 +1,8 @@
 package World;
 
-import Camera.DrawInterface;
+import World.Block.Block;
+import World.Blocks.BlockAir;
+import World.Blocks.BlockGrass;
 
 import java.awt.*;
 import java.util.HashMap;
@@ -22,7 +24,13 @@ public class World {
         for (int i = 0; i < this.w; i++) {
             for (int j = 0; j < this.h; j++) {
                 Vector pos = new Vector(i, j);
-                blockMap.put(pos, new Block(pos, BlockType.AIR));
+                Vector rPos = pos.mult(Block.blockSize);
+                if (pos.y < this.w/2) {
+                    blockMap.put(rPos, new BlockAir(rPos));
+                }
+                if (pos.y >= this.w/2) {
+                    blockMap.put(rPos, new BlockGrass(rPos));
+                }
             }
         }
     }
@@ -33,7 +41,7 @@ public class World {
         }
     }
 
-    public void render(DrawInterface g) {
+    public void render(Graphics2D g) {
         for (Block b : blockMap.values()) {
             b.render(g);
         }

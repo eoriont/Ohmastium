@@ -3,6 +3,7 @@ package Player;
 import Camera.*;
 import Game.GameStateManager;
 import Input.KeyboardManager;
+import World.Block.Block;
 import World.Vector;
 import World.World;
 
@@ -15,6 +16,8 @@ public class Player {
     public World world;
     public Camera cam;
     public GameStateManager gsm;
+
+    public float moveSpeed = 2;
 
     public Vector size;
 
@@ -31,16 +34,56 @@ public class Player {
 
     public void tick(double deltaTime) {
         if (KeyboardManager.isKeyDown(KeyEvent.VK_W)) {
-            this.pos.y --;
+            this.pos.y -= moveSpeed;
+            for (Block b : world.blockMap.values()) {
+                if (b.isSolid()) {
+                    boolean col = Vector.collision(pos, size, b.pos, new Vector(Block.blockSize));
+                    if (col) {
+                        this.pos.y += moveSpeed;
+                        break;
+                    }
+                }
+            }
         }
         if (KeyboardManager.isKeyDown(KeyEvent.VK_S)) {
-            this.pos.y ++;
+            this.pos.y += moveSpeed;
+            for (Block b : world.blockMap.values()) {
+                if (b.isSolid()) {
+                    boolean col = Vector.collision(pos, size, b.pos, new Vector(Block.blockSize));
+                    if (col) {
+                        this.pos.y -= moveSpeed;
+                        break;
+                    }
+                }
+            }
         }
         if (KeyboardManager.isKeyDown(KeyEvent.VK_A)) {
-            this.pos.x --;
+            this.pos.x -= moveSpeed;
+            for (Block b : world.blockMap.values()) {
+                if (b.isSolid()) {
+                    boolean col = Vector.collision(pos, size, b.pos, new Vector(Block.blockSize));
+                    if (col) {
+                        this.pos.x += moveSpeed;
+                        break;
+                    }
+                }
+            }
         }
         if (KeyboardManager.isKeyDown(KeyEvent.VK_D)) {
-            this.pos.x ++;
+            this.pos.x += moveSpeed;
+            for (Block b : world.blockMap.values()) {
+                if (b.isSolid()) {
+                    boolean col = Vector.collision(pos, size, b.pos, new Vector(Block.blockSize));
+                    if (col) {
+                        this.pos.x -= moveSpeed;
+                        break;
+                    }
+                }
+            }
+        }
+        if (KeyboardManager.isKeyDown(KeyEvent.VK_ESCAPE)) {
+            System.out.println("Exiting...");
+            System.exit(1);
         }
     }
 

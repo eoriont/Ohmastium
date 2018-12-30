@@ -16,8 +16,6 @@ public class GameLoop extends JPanel implements Runnable {
     private Thread thread;
     private boolean running;
 
-    public JFrame window;
-
     private int fps, tps;
     private int width, height;
 
@@ -26,10 +24,9 @@ public class GameLoop extends JPanel implements Runnable {
     public Graphics2D graphics2D;
     public BufferedImage img;
 
-    public GameLoop(int width, int height, JFrame window) {
+    public GameLoop(int width, int height) {
         this.width = width;
         this.height = height;
-        this.window = window;
 
         setPreferredSize(new Dimension(width, height));
         setFocusable(false);
@@ -85,14 +82,6 @@ public class GameLoop extends JPanel implements Runnable {
                 fps = frames;
                 frames = 0;
                 ticks = 0;
-            }
-
-            if(gsm.pendingState != null) {
-                gsm.pushState(gsm.pendingState);
-            }
-            if(KeyboardManager.isKeyDown(KeyEvent.VK_ESCAPE)) {
-                System.out.println("Closing Window.");
-                window.dispatchEvent(new WindowEvent(window, WindowEvent.WINDOW_CLOSING));
             }
 
         }
