@@ -1,5 +1,6 @@
 package Engine;
 
+import Assets.Assets;
 import Game.GameStateManager;
 import Input.KeyboardManager;
 
@@ -91,6 +92,9 @@ public class GameLoop extends JPanel implements Runnable {
         img = new BufferedImage(width, height, BufferedImage.TYPE_INT_RGB);
         graphics2D = (Graphics2D) img.getGraphics();
         running = true;
+
+        Assets assets = new Assets();
+        assets.init();
 
         gsm = new GameStateManager(graphics2D);
         gsm.init();

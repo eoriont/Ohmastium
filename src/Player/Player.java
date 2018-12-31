@@ -1,5 +1,6 @@
 package Player;
 
+import Assets.Assets;
 import Camera.*;
 import Game.GameStateManager;
 import Input.KeyboardManager;
@@ -88,8 +89,7 @@ public class Player {
     }
 
     public void render(Graphics2D g) {
-        g.setColor(Color.RED);
-        g.fillRect((int) (pos.x + cam.pos.x), (int) (pos.y + cam.pos.y), (int) size.x, (int) size.y);
+        g.drawImage(Assets.PLAYER, (int)(cam.pos.x + pos.x), (int)(cam.pos.y + pos.y), (int)size.x, (int)size.y, null);
     }
 
 }

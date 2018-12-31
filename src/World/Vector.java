@@ -35,7 +35,6 @@ public class Vector {
         rh += ry;
         tw += tx;
         th += ty;
-        //      overflow || intersect
         return ((rw < rx || rw > tx) &&
                 (rh < ry || rh > ty) &&
                 (tw < tx || tw > rx) &&

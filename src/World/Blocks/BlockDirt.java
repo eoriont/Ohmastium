@@ -7,9 +7,8 @@ import World.WorldState;
 
 import java.awt.*;
 
-public class BlockGrass extends Block {
-
-    public BlockGrass(Vector pos) {
+public class BlockDirt extends Block {
+    public BlockDirt(Vector pos) {
         super(pos);
     }
 
@@ -22,7 +21,7 @@ public class BlockGrass extends Block {
     }
 
     public void render(Graphics2D g) {
-        g.drawImage(Assets.GRASS, (int)(WorldState.cam.pos.x + (pos.x)),(int)(WorldState.cam.pos.y + (pos.y)), blockSize, blockSize, null);
+        g.drawImage(Assets.DIRT, (int)(WorldState.cam.pos.x + (pos.x)),(int)(WorldState.cam.pos.y + (pos.y)), blockSize, blockSize, null);
     }
 
     public boolean isSolid() {

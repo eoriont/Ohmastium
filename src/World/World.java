@@ -2,6 +2,7 @@ package World;
 
 import World.Block.Block;
 import World.Blocks.BlockAir;
+import World.Blocks.BlockDirt;
 import World.Blocks.BlockGrass;
 
 import java.awt.*;
@@ -28,8 +29,11 @@ public class World {
                 if (pos.y < this.w/2) {
                     blockMap.put(rPos, new BlockAir(rPos));
                 }
-                if (pos.y >= this.w/2) {
+                if (pos.y == this.w/2) {
                     blockMap.put(rPos, new BlockGrass(rPos));
+                }
+                if (pos.y > this.w/2) {
+                    blockMap.put(rPos, new BlockDirt(rPos));
                 }
             }
         }
