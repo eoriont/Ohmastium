@@ -4,6 +4,7 @@ import Assets.Assets;
 import Camera.*;
 import Game.GameStateManager;
 import Input.KeyboardManager;
+import Input.MouseManager;
 import World.Block.Block;
 import World.Vector;
 import World.World;
@@ -109,6 +110,7 @@ public class Player {
 
     public void render(Graphics2D g) {
         g.drawImage(Assets.PLAYER, (int)(cam.pos.x + pos.x), (int)(cam.pos.y + pos.y), (int) size.x, (int) size.y, null);
+        g.drawString(MouseManager.getPos().subtract(cam.pos).toString(), 20, 20);
     }
 
 }

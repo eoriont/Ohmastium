@@ -6,7 +6,7 @@ import java.io.File;
 
 public class Assets {
 
-    public BufferedImage getAssetImage(String path) {
+    public static BufferedImage getAssetImage(String path) {
         BufferedImage img = null;
         File imgfile = new File("assets/" + path + ".png");
         try {
@@ -18,11 +18,15 @@ public class Assets {
     }
 
     public static BufferedImage GRASS, DIRT, AIR, PLAYER;
+    public static BufferedImage FUSOR;
+    public static BufferedImage CURSOR;
 
-    public void init() {
+    public static void init() {
         GRASS = getAssetImage("grass");
         DIRT = getAssetImage("dirt");
         AIR = getAssetImage("air");
         PLAYER = getAssetImage("player");
+        FUSOR = getAssetImage("fusor");
+        CURSOR = getAssetImage("cursor");
     }
 }

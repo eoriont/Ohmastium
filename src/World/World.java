@@ -1,8 +1,10 @@
 package World;
 
+import Input.MouseManager;
 import World.Block.Block;
 import World.Blocks.BlockAir;
 import World.Blocks.BlockDirt;
+import World.Blocks.BlockFusor;
 import World.Blocks.BlockGrass;
 
 import java.awt.*;
@@ -21,11 +23,15 @@ public class World {
 
     public void init() {
         blockMap = new HashMap<Vector, Block>();
-
+        Vector fusorPos = new Vector(10, 9).mult(Block.blockSize);
         for (int i = 0; i < this.w; i++) {
             for (int j = 0; j < this.h; j++) {
                 Vector pos = new Vector(i, j);
                 Vector rPos = pos.mult(Block.blockSize);
+                if (i == 10 && j == 9) {
+                    blockMap.put(fusorPos, new BlockFusor(fusorPos));
+                    continue;
+                }
 
                 if (pos.x == 0 || pos.x == this.w-1) {
                     blockMap.put(rPos, new BlockDirt(rPos));
@@ -41,11 +47,26 @@ public class World {
                 }
             }
         }
+
+        for (Block b : blockMap.values()) {
+            b.init();
+        }
     }
 
     public void tick(double deltaTime) {
         for (Block b : blockMap.values()) {
             b.tick(deltaTime);
+        }
+    }
+
+    public void mouseClick(Vector mousePos) {
+        for (Block b : blockMap.values()) {
+            Vector mPos = mousePos.subtract(WorldState.cam.pos);
+            if (Vector.collision(mPos, new Vector(10, 10), b.pos, new Vector(Block.blockSize))) {
+                System.out.println(b.pos);
+                b.mouseClick(mousePos);
+                break;
+            }
         }
     }
 

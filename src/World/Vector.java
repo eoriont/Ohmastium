@@ -15,6 +15,13 @@ public class Vector {
         this.y = v;
     }
 
+    public Vector add(Vector v) {
+        return new Vector(this.x + v.x, this.y + v.y);
+    }
+    public Vector subtract(Vector v) {
+        return new Vector(this.x - v.x, this.y - v.y);
+    }
+
     public Vector mult(float m) {
         return new Vector(this.x * m, this.y * m);
     }

@@ -24,6 +24,10 @@ public class Block {
 
     }
 
+    public void mouseClick(Vector mousePos) {
+
+    }
+
     public void render(Graphics2D g) {
         g.setColor(Color.WHITE);
         g.drawRect((int)(WorldState.cam.pos.x + (pos.x)),(int)(WorldState.cam.pos.y + (pos.y)), blockSize, blockSize);

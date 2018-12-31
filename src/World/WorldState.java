@@ -43,4 +43,10 @@ public class WorldState extends GameState {
         player.render(g);
     }
 
+    @Override
+    public void mouseClick(Vector mousePos) {
+        world.mouseClick(mousePos);
+    }
+
+
 }

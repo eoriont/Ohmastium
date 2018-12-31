@@ -1,5 +1,6 @@
 package Game;
 
+import World.Vector;
 import World.WorldState;
 
 import java.awt.*;
@@ -24,6 +25,10 @@ public class GameStateManager {
 
     public void render(Graphics2D g) {
         gameStates.peek().render(g);
+    }
+
+    public void mouseClick(Vector mousePos) {
+        gameStates.peek().mouseClick(mousePos);
     }
 
 }

@@ -93,9 +93,6 @@ public class GameLoop extends JPanel implements Runnable {
         graphics2D = (Graphics2D) img.getGraphics();
         running = true;
 
-        Assets assets = new Assets();
-        assets.init();
-
         gsm = new GameStateManager(graphics2D);
         gsm.init();
     }

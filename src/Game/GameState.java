@@ -1,5 +1,7 @@
 package Game;
 
+import World.Vector;
+
 import java.awt.*;
 
 public abstract class GameState {
@@ -13,5 +15,7 @@ public abstract class GameState {
     public abstract void init();
     public abstract void tick(double deltaTime);
     public abstract void render(Graphics2D g);
+
+    public abstract void mouseClick(Vector mousePos);
 
 }
