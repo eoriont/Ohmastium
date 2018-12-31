@@ -26,13 +26,17 @@ public class World {
             for (int j = 0; j < this.h; j++) {
                 Vector pos = new Vector(i, j);
                 Vector rPos = pos.mult(Block.blockSize);
+
+                if (pos.x == 0 || pos.x == this.w-1) {
+                    blockMap.put(rPos, new BlockDirt(rPos));
+                    continue;
+                }
+
                 if (pos.y < this.w/2) {
                     blockMap.put(rPos, new BlockAir(rPos));
-                }
-                if (pos.y == this.w/2) {
+                } else if (pos.y == this.w/2) {
                     blockMap.put(rPos, new BlockGrass(rPos));
-                }
-                if (pos.y > this.w/2) {
+                } else if (pos.y > this.w/2) {
                     blockMap.put(rPos, new BlockDirt(rPos));
                 }
             }

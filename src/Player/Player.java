@@ -18,9 +18,9 @@ public class Player {
     public Camera cam;
     public GameStateManager gsm;
 
-    public float moveSpeed = 2;
+    public float moveSpeed = 3;
 
-    public Vector vel, accel;
+    public Vector vel, accel, friction;
 
     public boolean grounded = false;
 
@@ -33,10 +33,11 @@ public class Player {
     }
 
     public void init() {
-        pos = new Vector(0, 0);
+        pos = new Vector(Block.blockSize, 0);
         size = new Vector(50, 50);
         vel = new Vector(0, 0);
         accel = new Vector(0, .2f);
+        friction = new Vector(.4f, 0);
     }
 
     public void tick(double deltaTime) {
@@ -70,29 +71,36 @@ public class Player {
         }
 
         if (KeyboardManager.isKeyDown(KeyEvent.VK_A)) {
-            this.pos.x -= moveSpeed;
-            for (Block b : world.blockMap.values()) {
-                if (b.isSolid()) {
-                    boolean col = Vector.collision(pos, size, b.pos, new Vector(Block.blockSize));
-                    if (col) {
-                        this.pos.x += moveSpeed;
-                        break;
-                    }
-                }
-            }
+            this.vel.x -= moveSpeed;
         }
+
         if (KeyboardManager.isKeyDown(KeyEvent.VK_D)) {
-            this.pos.x += moveSpeed;
-            for (Block b : world.blockMap.values()) {
-                if (b.isSolid()) {
-                    boolean col = Vector.collision(pos, size, b.pos, new Vector(Block.blockSize));
-                    if (col) {
-                        this.pos.x -= moveSpeed;
-                        break;
+            this.vel.x += moveSpeed;
+        }
+
+        this.pos.x += this.vel.x;
+
+        for (Block b : world.blockMap.values()) {
+            if (b.isSolid()) {
+                boolean col = Vector.collision(pos, size, b.pos, new Vector(Block.blockSize));
+                if (col) {
+                    if (this.vel.x > 0) {
+                        this.pos.x = b.pos.x-size.x;
+                    } else if (this.vel.x < 0) {
+                        this.pos.x = b.pos.x+Block.blockSize;
                     }
+                    this.vel.x = 0;
+                    break;
                 }
             }
         }
+
+        if (grounded) {
+            this.vel.x *= this.friction.x;
+        } else {
+            this.vel.x *= .5f;
+        }
+
         if (KeyboardManager.isKeyDown(KeyEvent.VK_ESCAPE)) {
             System.out.println("Exiting...");
             System.exit(1);
