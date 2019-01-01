@@ -18,7 +18,7 @@ public class Assets {
     }
 
     public static BufferedImage GRASS, DIRT, AIR, PLAYER;
-    public static BufferedImage FUSOR;
+    public static BufferedImage FUSOR, GUI, GUIBUTTON, GUISLOT;
     public static BufferedImage CURSOR;
 
     public static void init() {
@@ -28,5 +28,8 @@ public class Assets {
         PLAYER = getAssetImage("player");
         FUSOR = getAssetImage("fusor");
         CURSOR = getAssetImage("cursor");
+        GUI = getAssetImage("GUI");
+        GUIBUTTON = getAssetImage("guibutton");
+        GUISLOT = getAssetImage("guislot");
     }
 }

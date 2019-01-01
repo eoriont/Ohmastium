@@ -1,26 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/src/World/World.java" line="70" />
+    <bookmark url="file://$PROJECT_DIR$/src/World/World.java" line="66" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b59ac8e8-6f41-491b-8c98-40beca52c2d8" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Ohmastium/Assets/Assets.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Ohmastium/Assets/Assets.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Ohmastium/Game/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Ohmastium/Game/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Ohmastium/Player/Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Ohmastium/Player/Player.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Ohmastium/World/Vector.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Ohmastium/World/Vector.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Ohmastium/World/World.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Ohmastium/World/World.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Ohmastium/World/Blocks/BlockAir.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Ohmastium/World/Blocks/BlockAir.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Ohmastium/World/Blocks/BlockDirt.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Ohmastium/World/Blocks/BlockDirt.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Ohmastium/World/Blocks/BlockGrass.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Ohmastium/World/Blocks/BlockGrass.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Ohmastium/World/WorldState.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Ohmastium/World/WorldState.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Assets/Assets.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Assets/Assets.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Camera/Camera.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Camera/Camera.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Engine/GameLoop.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Engine/GameLoop.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Game/GameState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Game/GameState.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Game/GameStateManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Game/GameStateManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Game/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Game/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Player/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Player/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/World/Block/Block.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/World/Block/Block.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/World/Vector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/World/Vector.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/World/World.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/World/World.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/World/Blocks/BlockAir.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/World/Blocks/BlockAir.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/World/Blocks/BlockDirt.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/World/Blocks/BlockDirt.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/World/Blocks/BlockFusor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/World/Blocks/BlockFusor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/World/Blocks/BlockGrass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/World/Blocks/BlockGrass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/World/Interface/Interface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/World/Interface/GUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/World/Interfaces/FusorInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/World/Interfaces/FusorGUI.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/World/WorldState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/World/WorldState.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -33,19 +30,13 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Player/Player.java">
+        <entry file="file://$PROJECT_DIR$/src/World/Blocks/BlockAir.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="663">
-              <caret line="112" column="71" selection-start-line="112" selection-start-column="21" selection-end-line="112" selection-end-column="71" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/World/World.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="575">
-              <caret line="66" column="58" selection-start-line="66" selection-start-column="58" selection-end-line="66" selection-end-column="58" />
+            <state relative-caret-position="238">
+              <caret line="21" column="137" selection-start-line="21" selection-start-column="137" selection-end-line="21" selection-end-column="137" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -53,12 +44,10 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Input/MouseManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
+            <state relative-caret-position="272">
               <caret line="26" column="58" selection-start-line="26" selection-start-column="58" selection-end-line="26" selection-end-column="58" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#538#539#0" expanded="true" />
-                <element signature="e#557#558#0" expanded="true" />
                 <element signature="e#498#499#0" expanded="true" />
                 <element signature="e#563#564#0" expanded="true" />
               </folding>
@@ -70,7 +59,80 @@
         <entry file="file://$PROJECT_DIR$/src/World/Blocks/BlockFusor.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="425">
-              <caret line="29" column="36" selection-start-line="29" selection-start-column="36" selection-end-line="29" selection-end-column="36" />
+              <caret line="35" column="5" selection-start-line="35" selection-start-column="5" selection-end-line="35" selection-end-column="5" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Assets/Assets.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="544">
+              <caret line="32" column="40" selection-start-line="32" selection-start-column="40" selection-end-line="32" selection-end-column="40" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/World/Interfaces/FusorGUI.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="286">
+              <caret line="24" column="40" selection-start-line="24" selection-start-column="40" selection-end-line="24" selection-end-column="40" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/World/Interface/GUIButton.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="476">
+              <caret line="28" column="59" selection-start-line="28" selection-start-column="59" selection-end-line="28" selection-end-column="59" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/World/Interface/GUISlot.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="425">
+              <caret line="25" column="34" selection-start-line="25" selection-start-column="34" selection-end-line="25" selection-end-column="34" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/World/Interface/GUI.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="187">
+              <caret line="15" column="18" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="18" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#305#306#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/World/Blocks/BlockGrass.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="289">
+              <caret line="24" column="114" selection-start-line="24" selection-start-column="114" selection-end-line="24" selection-end-column="114" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -102,26 +164,30 @@
         <option value="$PROJECT_DIR$/src/World/BlockType.java" />
         <option value="$PROJECT_DIR$/src/Camera/DrawInterface.java" />
         <option value="$PROJECT_DIR$/src/World/Block.java" />
-        <option value="$PROJECT_DIR$/src/World/Blocks/BlockGrass.java" />
-        <option value="$PROJECT_DIR$/src/World/Blocks/BlockAir.java" />
-        <option value="$PROJECT_DIR$/src/World/Blocks/BlockDirt.java" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/src/World/Vector.java" />
         <option value="$PROJECT_DIR$/src/Camera/Camera.java" />
         <option value="$PROJECT_DIR$/src/World/Interfaces/Interface.java" />
         <option value="$PROJECT_DIR$/src/World/Interface/Interface.java" />
-        <option value="$PROJECT_DIR$/src/World/Interfaces/FusorInterface.java" />
         <option value="$PROJECT_DIR$/src/Game/GameState.java" />
         <option value="$PROJECT_DIR$/src/World/Block/Block.java" />
-        <option value="$PROJECT_DIR$/src/Assets/Assets.java" />
         <option value="$PROJECT_DIR$/src/Engine/GameLoop.java" />
         <option value="$PROJECT_DIR$/src/Game/Main.java" />
         <option value="$PROJECT_DIR$/src/Game/GameStateManager.java" />
-        <option value="$PROJECT_DIR$/src/World/WorldState.java" />
-        <option value="$PROJECT_DIR$/src/World/Blocks/BlockFusor.java" />
         <option value="$PROJECT_DIR$/src/Player/Player.java" />
         <option value="$PROJECT_DIR$/src/Input/MouseManager.java" />
         <option value="$PROJECT_DIR$/src/World/World.java" />
+        <option value="$PROJECT_DIR$/src/World/Blocks/BlockAir.java" />
+        <option value="$PROJECT_DIR$/src/World/Blocks/BlockDirt.java" />
+        <option value="$PROJECT_DIR$/src/World/Blocks/BlockGrass.java" />
+        <option value="$PROJECT_DIR$/src/World/Interfaces/FusorInterface.java" />
+        <option value="$PROJECT_DIR$/src/World/Blocks/BlockFusor.java" />
+        <option value="$PROJECT_DIR$/src/World/WorldState.java" />
+        <option value="$PROJECT_DIR$/src/World/Interface/GUI.java" />
+        <option value="$PROJECT_DIR$/src/World/Interface/GUISlot.java" />
+        <option value="$PROJECT_DIR$/src/Assets/Assets.java" />
+        <option value="$PROJECT_DIR$/src/World/Interfaces/FusorGUI.java" />
+        <option value="$PROJECT_DIR$/src/World/Interface/GUIButton.java" />
       </list>
     </option>
   </component>
@@ -139,7 +205,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -206,19 +272,26 @@
               <item name="Ohmastium" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="World" type="462c0819:PsiDirectoryNode" />
+              <item name="Interface" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Ohmastium" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Ohmastium" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="World" type="462c0819:PsiDirectoryNode" />
               <item name="Interfaces" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1546283123457" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1546329087679" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -278,7 +351,7 @@
     <frame x="-7" y="-7" width="2575" height="1415" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26242545" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2671968" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -366,26 +439,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/World/Blocks/BlockAir.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="21" column="30" selection-start-line="21" selection-start-column="30" selection-end-line="21" selection-end-column="30" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/World/Blocks/BlockGrass.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="15" column="4" selection-start-line="15" selection-start-column="4" selection-end-line="29" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -400,54 +453,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/World/Blocks/BlockDirt.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="10" column="4" selection-start-line="10" selection-start-column="4" selection-end-line="28" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Game/GameState.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
           <caret line="18" column="53" selection-start-line="18" selection-start-column="53" selection-end-line="18" selection-end-column="53" />
           <folding>
             <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/World/Interface/Interface.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="32" column="25" lean-forward="true" selection-start-line="32" selection-start-column="25" selection-end-line="32" selection-end-column="25" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#407#408#0" expanded="true" />
-            <element signature="e#437#438#0" expanded="true" />
-            <element signature="e#477#478#0" expanded="true" />
-            <element signature="e#509#510#0" expanded="true" />
-            <element signature="e#538#539#0" expanded="true" />
-            <element signature="e#562#563#0" expanded="true" />
-            <element signature="e#611#612#0" expanded="true" />
-            <element signature="e#645#646#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/World/Interfaces/FusorInterface.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="29" column="61" selection-start-line="29" selection-start-column="61" selection-end-line="29" selection-end-column="61" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#201#202#0" expanded="true" />
-            <element signature="e#229#230#0" expanded="true" />
-            <element signature="e#285#286#0" expanded="true" />
-            <element signature="e#322#323#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -477,36 +488,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
           <caret line="24" column="51" selection-start-line="24" selection-start-column="51" selection-end-line="24" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/World/WorldState.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="663">
-          <caret line="46" column="45" selection-start-line="46" selection-start-column="45" selection-end-line="46" selection-end-column="45" />
-          <folding>
-            <element signature="e#965#966#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Assets/Assets.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/World/Blocks/BlockFusor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="29" column="36" selection-start-line="29" selection-start-column="36" selection-end-line="29" selection-end-column="36" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -541,29 +522,136 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Player/Player.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="663">
+        <state relative-caret-position="1734">
           <caret line="112" column="71" selection-start-line="112" selection-start-column="21" selection-end-line="112" selection-end-column="71" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Input/MouseManager.java">
+    <entry file="file://$PROJECT_DIR$/src/World/Blocks/BlockDirt.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="26" column="58" selection-start-line="26" selection-start-column="58" selection-end-line="26" selection-end-column="58" />
+        <state relative-caret-position="272">
+          <caret line="23" column="138" selection-start-line="23" selection-start-column="138" selection-end-line="23" selection-end-column="138" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#538#539#0" expanded="true" />
-            <element signature="e#557#558#0" expanded="true" />
-            <element signature="e#498#499#0" expanded="true" />
-            <element signature="e#563#564#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/World/World.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="575">
-          <caret line="66" column="58" selection-start-line="66" selection-start-column="58" selection-end-line="66" selection-end-column="58" />
+        <state relative-caret-position="493">
+          <caret line="38" column="17" selection-start-line="38" selection-start-column="17" selection-end-line="38" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/World/WorldState.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="32" column="23" selection-start-line="32" selection-start-column="23" selection-end-line="32" selection-end-column="23" />
+          <folding>
+            <element signature="e#1171#1172#0" expanded="true" />
+            <element signature="e#1213#1214#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/World/Blocks/BlockAir.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="21" column="137" selection-start-line="21" selection-start-column="137" selection-end-line="21" selection-end-column="137" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Input/MouseManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="26" column="58" selection-start-line="26" selection-start-column="58" selection-end-line="26" selection-end-column="58" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#498#499#0" expanded="true" />
+            <element signature="e#563#564#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/World/Blocks/BlockFusor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="35" column="5" selection-start-line="35" selection-start-column="5" selection-end-line="35" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/World/Interface/GUI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="15" column="18" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="18" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#305#306#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/World/Blocks/BlockGrass.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="24" column="114" selection-start-line="24" selection-start-column="114" selection-end-line="24" selection-end-column="114" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Assets/Assets.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="544">
+          <caret line="32" column="40" selection-start-line="32" selection-start-column="40" selection-end-line="32" selection-end-column="40" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/World/Interface/GUISlot.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="25" column="34" selection-start-line="25" selection-start-column="34" selection-end-line="25" selection-end-column="34" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/World/Interfaces/FusorGUI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="24" column="40" selection-start-line="24" selection-start-column="40" selection-end-line="24" selection-end-column="40" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-10.0.2/lib/src.zip!/java.desktop/java/awt/Graphics2D.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="278">
+          <caret line="666" column="25" selection-start-line="666" selection-start-column="25" selection-end-line="666" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/World/Interface/GUIButton.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="28" column="59" selection-start-line="28" selection-start-column="59" selection-end-line="28" selection-end-column="59" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

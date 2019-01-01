@@ -21,7 +21,7 @@ public class BlockDirt extends Block {
     }
 
     public void render(Graphics2D g) {
-        g.drawImage(Assets.DIRT, (int)(WorldState.cam.pos.x + (pos.x)),(int)(WorldState.cam.pos.y + (pos.y)), blockSize, blockSize, null);
+        g.drawImage(Assets.DIRT, (int)(WorldState.cam.pos.x + (pos.x))-1,(int)(WorldState.cam.pos.y + (pos.y))-1, blockSize+1, blockSize+1, null);
     }
 
     public boolean isSolid() {

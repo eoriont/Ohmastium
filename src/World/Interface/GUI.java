@@ -3,14 +3,18 @@ package World.Interface;
 import World.Vector;
 
 import java.awt.*;
+import java.util.ArrayList;
+import java.util.List;
 
-public class Interface {
+public class GUI {
 
     public Vector pos, size;
     public boolean shown = false;
 
-    public Interface() {
+    public static List<GUI> guis = new ArrayList<>();
 
+    public GUI() {
+        guis.add(this);
     }
 
     public void init() {

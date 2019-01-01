@@ -4,6 +4,7 @@ import Camera.*;
 import Game.GameState;
 import Game.GameStateManager;
 import Player.Player;
+import World.Interface.GUI;
 
 import java.awt.*;
 
@@ -27,6 +28,10 @@ public class WorldState extends GameState {
 
         player = new Player(gsm, world, cam);
         player.init();
+
+        for (GUI gui : GUI.guis) {
+            gui.init();
+        }
     }
 
     @Override
@@ -35,12 +40,18 @@ public class WorldState extends GameState {
         cam.followPlayer(player);
         world.tick(deltaTime);
         player.tick(deltaTime);
+        for (GUI gui : GUI.guis) {
+            gui.tick(deltaTime);
+        }
     }
 
     @Override
     public void render(Graphics2D g) {
         world.render(g);
         player.render(g);
+        for (GUI gui : GUI.guis) {
+            gui.render(g);
+        }
     }
 
     @Override
